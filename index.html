@@ -6,44 +6,45 @@
         content="width=device-width, user-scalable=no, initial-scale=1.0, maximum-scale=1.0, minimum-scale=1.0">
   <meta http-equiv="X-UA-Compatible" content="ie=edge">
   <title>Document</title>
-  <link rel="stylesheet" href="index.css">
+  <link rel="stylesheet" href="css/onepage-scroll.css">
+  <link rel="stylesheet" href="css/index.css">
 </head>
 <body>
 <header class="yx-header cf">
   <img class="lf" src="imgs/logo_text.png" alt="">
   <div class="rt">
     <span>下载中心</span>
-    <span>登录</span>
+    <span class="yx-index-header-login">登录</span>
   </div>
 </header>
-<div class="yx-main">
-  <div class="yx-main-first">
+<div class="main  yx-main">
+  <section class="yx-main-first">
     <div class="yx-main-first-footer">
-        <ul>
-          <li>
-            <img src="imgs/s_gzf.png" alt="">
-            <span>研修计划</span>
-          </li>
-          <li>
-            <img src="imgs/s_gzf.png" alt="">
-            <span>研修计划</span>
-          </li>
-          <li>
-            <img src="imgs/s_gzf.png" alt="">
-            <span>研修计划</span>
-          </li>
-          <li>
-            <img src="imgs/s_gzf.png" alt="">
-            <span>研修计划</span>
-          </li>
-          <li>
-            <img src="imgs/s_gzf.png" alt="">
-            <span>研修计划</span>
-          </li>
-        </ul>
+      <ul>
+        <li>
+          <img src="imgs/s_gzf.png" alt="">
+          <span>研修计划</span>
+        </li>
+        <li>
+          <img src="imgs/s_gzf.png" alt="">
+          <span>研修计划</span>
+        </li>
+        <li>
+          <img src="imgs/s_gzf.png" alt="">
+          <span>研修计划</span>
+        </li>
+        <li>
+          <img src="imgs/s_gzf.png" alt="">
+          <span>研修计划</span>
+        </li>
+        <li>
+          <img src="imgs/s_gzf.png" alt="">
+          <span>研修计划</span>
+        </li>
+      </ul>
     </div>
-  </div>
-  <div class="yx-main-two">
+  </section>
+  <section class="yx-main-two">
     <div class="yx-main-two-header">
       <img src="imgs/box2Text.png" alt="">
     </div>
@@ -70,12 +71,60 @@
         <span>999</span>
       </li>
     </ul>
-  </div>
-  <div class="yx-main-three"></div>
-  <div class="yx-main-four"></div>
+  </section>
+  <section class="yx-main-three"></section>
+  <section class="yx-main-four">
+    <footer class="yx-footer">
+      主办单位：岳阳市云溪区教育局 平台运维：武汉颂大教育科技股份有限公司
+    </footer>
+  </section>
+
 </div>
-<footer class="yx-footer">
-  主办单位：岳阳市云溪区教育局       平台运维：武汉颂大教育科技股份有限公司
-</footer>
+<!--登录-->
+<div class="yx-login-mask"></div>
+<div class="yx-login">
+  <h2>用户登录</h2>
+  <form action="" id="yx-login-form" onsubmit="return false">
+    <div class="yx-login-username">
+      <span>用户名</span>
+      <div>
+        <i class="iconfont"> &#xe603;</i>
+        <input type="text" id="username">
+      </div>
+    </div>
+    <div class="yx-login-password">
+      <span>密码</span>
+      <div>
+        <i class="iconfont"> &#xe61a;</i>
+        <input type="password" id="password">
+      </div>
+    </div>
+    <p id="yx-error-tip" class="yx-error-tip"></p>
+    <button type="submit" class="yx-login-button">登录</button>
+  </form>
+</div>
+<script src="js/jquery.min.js"></script>
+<script src="js/jquery.onepage-scroll.js"></script>
+<script src="js/index.js"></script>
 </body>
+<script>
+  $(".main").onepage_scroll({
+    sectionContainer: "section",     // sectionContainer accepts any kind of selector in case you don't want to use section
+    easing: "ease",                  // Easing options accepts the CSS3 easing animation such "ease", "linear", "ease-in",
+                                     // "ease-out", "ease-in-out", or even cubic bezier value such as "cubic-bezier(0.175, 0.885, 0.420, 1.310)"
+    animationTime: 1000,             // AnimationTime let you define how long each section takes to animate
+    pagination: true,                // You can either show or hide the pagination. Toggle true for show, false for hide.
+    updateURL: false,                // Toggle this true if you want the URL to be updated automatically when the user scroll to each page.
+    beforeMove: function (index) {
+    },  // This option accepts a callback function. The function will be called before the page moves.
+    afterMove: function (index) {
+    },   // This option accepts a callback function. The function will be called after the page moves.
+    loop: false,                     // You can have the page loop back to the top/bottom when the user navigates at up/down on the first/last page.
+    keyboard: true,                  // You can activate the keyboard controls
+    responsiveFallback: false,        // You can fallback to normal page scroll by defining the width of the browser in which
+    // you want the responsive fallback to be triggered. For example, set this to 600 and whenever
+    // the browser's width is less than 600, the fallback will kick in.
+    direction: "vertical"          // You can now define the direction of the One Page Scroll animation. Options available are "vertical" and "horizontal". The default value is "vertical".
+  });
+</script>
 </html>

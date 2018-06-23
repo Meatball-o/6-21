@@ -1,3 +1,16 @@
+@font-face {
+  font-family: 'iconfont';
+  /* project id 718105 */
+  src: url("//at.alicdn.com/t/font_718105_rbso5k20rd.eot");
+  src: url("//at.alicdn.com/t/font_718105_rbso5k20rd.eot?#iefix") format("embedded-opentype"), url("//at.alicdn.com/t/font_718105_rbso5k20rd.woff") format("woff"), url("//at.alicdn.com/t/font_718105_rbso5k20rd.ttf") format("truetype"), url("//at.alicdn.com/t/font_718105_rbso5k20rd.svg#iconfont") format("svg"); }
+.iconfont {
+  font-family: "iconfont" !important;
+  font-size: 16px;
+  font-style: normal;
+  -webkit-font-smoothing: antialiased;
+  -webkit-text-stroke-width: 0.2px;
+  -moz-osx-font-smoothing: grayscale; }
+
 * {
   margin: 0;
   padding: 0;
@@ -68,8 +81,9 @@ p {
       display: inline-block; }
 
 .yx-main .yx-main-first {
-  background: url(imgs/AAA.png) 0% 0%/100% 100%;
-  height: 908px;
+  background-size: cover;
+  background-position: center;
+  background-image: url(../imgs/AAA.png);
   position: relative;
   z-index: 11; }
   .yx-main .yx-main-first .yx-main-first-footer {
@@ -103,8 +117,10 @@ p {
           color: #fff;
           font-size: 15px; }
 .yx-main .yx-main-two {
-  background: url(imgs/box2.png) 0% 0%/100% 100%;
-  height: 908px;
+  background-image: url(../imgs/box2.png);
+  background-size: cover;
+  background-position: center;
+  height: 1016px;
   position: relative;
   z-index: 11;
   margin-top: -5px; }
@@ -123,7 +139,7 @@ p {
     position: relative;
     text-align: center; }
     .yx-main .yx-main-two ul li {
-      background: url(imgs/num_hdrs.png);
+      background: url(../imgs/num_hdrs.png);
       background-size: 100% 100%;
       width: 150px;
       margin: 0 auto;
@@ -142,16 +158,18 @@ p {
         color: white;
         text-align: center; }
 .yx-main .yx-main-three {
-  background: url(imgs/BBB.png) 0% 0%/100% 100%;
-  height: 908px;
+  background-image: url(../imgs/BBB.png);
+  background-size: cover;
+  background-position: center;
   position: relative;
-  margin-top: -5px;
+  margin-top: -10px;
   z-index: 99; }
 .yx-main .yx-main-four {
-  background: url(imgs/CCC.png) 0% 0%/100% 100%;
-  height: 908px;
+  background-image: url(../imgs/CCC.png);
+  background-size: cover;
+  background-position: center;
   position: relative;
-  margin-top: -3px;
+  margin-top: -11px;
   z-index: 100; }
 
 .yx-footer {
@@ -163,6 +181,77 @@ p {
   text-align: center;
   font-size: 15px;
   border-top: 1px solid #ffffff;
-  bottom: 1px; }
+  position: absolute;
+  bottom: 0;
+  left: 0; }
+
+.yx-login {
+  display: none;
+  position: fixed;
+  left: 70%;
+  border-radius: 20px;
+  background: #fff;
+  top: 30%;
+  z-index: 200;
+  width: 320px;
+  height: 380px;
+  box-sizing: border-box;
+  padding: 15px; }
+  .yx-login h2 {
+    height: 45px;
+    line-height: 34px;
+    font-size: 30px;
+    text-align: center;
+    border-bottom: 4px solid #1DA3FF; }
+  .yx-login form div span {
+    display: block;
+    color: #9f9f9f;
+    font-size: 18px;
+    height: 40px;
+    line-height: 40px; }
+  .yx-login form div div {
+    position: relative; }
+    .yx-login form div div i {
+      position: absolute;
+      top: 20px;
+      left: 8px;
+      color: #9f9f9f;
+      font-size: 22px; }
+    .yx-login form div div input {
+      border: 1px solid #B7B7B7;
+      border-radius: 10px;
+      color: #989fa9;
+      height: 34px;
+      line-height: 34px;
+      margin: 14px 0 10px;
+      width: 249px;
+      text-align: left;
+      box-sizing: border-box;
+      padding-left: 40px; }
+  .yx-login form button {
+    font-size: 22px;
+    color: #fff;
+    line-height: 47px;
+    width: 270px;
+    height: 47px;
+    margin: 30px auto;
+    position: relative;
+    background: linear-gradient(to right, #527CFF, #01B9FF);
+    border: none; }
+
+.yx-login-mask {
+  display: none;
+  background: rgba(0, 0, 0, 0.1);
+  width: 100%;
+  height: 100%;
+  position: fixed;
+  top: 0;
+  left: 0;
+  z-index: 199; }
+
+.yx-error-tip {
+  height: 20px;
+  line-height: 36px;
+  color: red; }
 
 /*# sourceMappingURL=index.css.map */
